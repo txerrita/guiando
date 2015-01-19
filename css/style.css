@@ -1,0 +1,259 @@
+@charset 'UTF-8';
+@import url("font-awesome.min.css");
+
+
+html {
+    overflow: hidden;
+}
+body { 
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+}
+
+.fa {
+    color: #586069;
+}
+
+.fa:hover {
+    color: #797E89;
+}
+
+.leaflet-top{
+    top: 60px;
+}
+
+#map { 
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    width: 100%; 
+}
+
+.topbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    color: white;
+    background-color: #2A3B4C;
+    font-family: 'Open Sans', sans-serif;
+    z-index: 5;
+}
+
+.title {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.title-main{
+    font-size: 1.3em;
+    color: rgb(248,177,149);
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.title-rest {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.btn-bar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 50px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.btn-bar-btn {
+    height: 50px;
+    width: 50px;
+    font-size: 2em;
+    background-color: rgb(248,177,149);
+}
+
+.btn-bar-btn i {
+    position: relative;
+    top: 3px;
+    left: 12px;
+    color: #1B2530;
+}
+
+
+.off-canvas {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    color: white;
+    padding-left: 5px;
+    padding-top: 10px;
+    background-color: #2A3B4C;
+    font-family: 'Open Sans', sans-serif;
+    z-index: 5;
+    display: none;
+    /*-webkit-transform: translateX(250px);
+    -webkit-transition: 0.3s ease-in;*/
+}
+
+.off-canvas.expanded {
+    display: block;
+    /*-webkit-transform: translateX(0);*/
+}
+
+.off-canvas ul {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    list-style: none;
+    padding-left: 5px;
+    margin: 0;
+    width: 250px;
+}
+
+
+
+#menu {
+    overflow: hidden;
+	width: 250px;
+}
+
+.menu-item {
+	cursor: pointer;
+    padding: 10px;
+    border-top: 1px solid #586069;
+    border-bottom: 1px solid #1B2530;
+}
+
+.menu-item:first-child {
+    border-top: none;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item a {
+    font-size: 1em;
+}
+
+.submenu {
+    height: 100%;
+    background-color: #2A3B4C;
+    -webkit-transition: 0.2s ease-in;
+}
+
+.menu-level-1 {
+    z-index: 1;
+}
+
+.menu-level-2 {
+    z-index: 2;
+    -webkit-transform: translateX(250px);
+}
+
+.menu-level-3 {
+    z-index: 3;
+    -webkit-transform: translateX(250px);
+}
+
+.menu-active {
+    -webkit-transform: translateX(0);
+}
+
+
+
+#trails {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.trail-desc {
+    display: block;
+    font-size: 0.8em;
+    padding-top: 5px;
+}
+
+.trail-distance {
+    display: block;
+    font-size: 0.8em;
+    padding-top: 5px;
+}
+
+.trail-name {
+    margin-left: 5px;
+	font-size: 0.9em;
+}
+
+.trail-familiar { 
+	
+}
+
+.trail-rating-amarillo {
+    color: #FF0;
+    position: relative;
+    font-size: 2em;
+    top: 7px;
+}
+
+.trail-rating-rojo {
+    color: red;
+	position: relative;
+    font-size: 2.3em;
+    top: 7px;
+}
+
+.trail-rating-azul {
+    color: #15758B;
+    position: relative;
+    top: 7px;
+    font-size: 2.3em;
+}
+
+.trail-rating-verde {
+    color: #348d08;
+    position: relative;
+    top: 7px;
+    font-size: 2.3em;
+}
+
+#trails li {
+    display: none;
+}
+
+#trails.filter-none li,
+#trails.filter-type-senderismo .category-type-senderismo,
+#trails.filter-type-btt .category-type-btt,
+#trails.filter-type-turistica .category-type-turistica,
+#trails.filter-rating-verde .category-rating-verde,
+#trails.filter-rating-azul .category-rating-azul,
+#trails.filter-rating-amarillo .category-rating-amarillo,
+#trails.filter-rating-rojo .category-rating-rojo,
+#trails.filter-distance-lt2 .category-distance-lt2,
+#trails.filter-distance-2to5 .category-distance-2to5,
+#trails.filter-distance-gt5 .category-distance-gt5 {
+    display: block;
+}
+
+#logo {
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    height: 50px;
+    width: 50px;
+    background: url('../images/logo.png') top left no-repeat;
+    background-size: 50px 50px;
+    cursor: pointer;
+}

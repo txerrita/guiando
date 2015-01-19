@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rutas Espinosa de los Monteros</title>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+        <link href="./css/font-awesome.min.css" rel="stylesheet">
+        <link href='http://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body onLoad="init()">
+        <div class="topbar">
+            <div class="title">
+                <span class="title-main">Espinosa de los Monteros</span>
+                <span class="title-rest">  algo diferente...</span>
+            </div>
+            <menu class="btn-bar">
+                <a class="btn-bar-btn" href="#" onClick="app.toggleMenu()"><i class="fa fa-bars" ></i></a>
+            </menu>
+        </div>
+        <div id="map"></div>
+        <div id="menu" class="off-canvas">
+            <a href="#"  onClick="app.back()"><i class="fa fa-chevron-left"></i></a>
+            <ul class="menu-level-1">
+                <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-none')"><a href="#">Todas las rutas</a></li>
+                <li class="menu-item" onClick="app.toggleSubMenu('portipo')"><a href="#">por tipo</a></li>
+                <li class="menu-item" onClick="app.toggleSubMenu('pordificultad')"><a href="#">por dificultad</a></li>
+                <li class="menu-item" onClick="app.toggleSubMenu('pordistancia')"><a href="#">por km</a></li>
+            </ul>
+            <ul id="portipo" class="submenu menu-level-2">
+                <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-type-senderismo')"><a href="#">Senderismo</a></li>
+                <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-type-btt')"><a href="#">BTT</a></li>
+                <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-type-turistica')"><a href="#">Turística</a></li>
+                
+            </ul>
+            <ul id="pordificultad" class="submenu menu-level-2">
+                <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-rating-verde')"><a href="#">rutas locales</a></li>
+                <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-rating-amarillo')"><a href="#">pequeño recorrido</a></li>
+                <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-rating-rojo')"><a href="#">grandes recorridos</a></li>
+                
+               
+            <ul id="pordistancia" class="submenu menu-level-2">
+                <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-distance-lt2')"><a href="#">< 2km</a></li>
+                <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-distance-2to5')"><a href="#">2-5km</a></li>
+                <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-distance-gt5')"><a href="#">> 5km</a></li>
+            </ul>
+            <ul id="trails" class="submenu menu-level-3"></ul>
+        </div>
+        <div id="logo" onClick="window.location = 'http://about.me/joserra';"></div>
+        <script src="phonegap.js"></script>
+        <script src='http://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
+        <script src="./js/trails.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
