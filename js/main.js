@@ -31,14 +31,22 @@ function app(window, document, L, bikeTrails) {
     L.rotatedMarker = function(pos, options) {
         return new L.RotatedMarker(pos, options);
     };
-
-    var map = L.mapbox.map('map', 'joserra.jf876a70', {
-        center: [43.063, -3.575],
-        zoom: 12,
-        gridLayer: false, 
-        maxZoom: 18
-    });
-
+	L.mapbox.accessToken = 'pk.eyJ1Ijoiam9zZXJyYSIsImEiOiJnMGdtWUh3In0.xm5EUQ0yb_QvTVZ_AraXaQ';
+//    var map = L.mapbox.map('map', 'joserra.jf876a70', {
+//        center: [43.063, -3.575],
+//        zoom: 12,
+//        gridLayer: true, 
+//        maxZoom: 18
+//    });
+	var map = L.mapbox.map('map', 'joserra.jf876a70')
+		.setView([43.063, -3.575], 12);
+		
+	map.gridControl.options.follow = true;	
+	var gridLayer1 = L.mapbox.gridLayer("joserra.guiando").addTo(map);
+	var gridControl = L.mapbox.gridControl(gridLayer1).addTo(map);
+	var gridLayer2 = L.mapbox.gridLayer("joserra.pois").addTo(map);
+	var gridControl = L.mapbox.gridControl(gridLayer2).addTo(map);
+	
     var trailsMenu = document.getElementById('trails');
 
     function toggleMenu(){
