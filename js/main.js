@@ -179,7 +179,7 @@ function app(window, document, L, bikeTrails) {
         map.locate({
             watch: true,
             setView: true, 
-			maxZoom: 15,
+			maxZoom: 12,
             enableHighAccuracy: true
         });
     }
