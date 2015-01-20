@@ -42,10 +42,9 @@ function app(window, document, L, bikeTrails) {
 		.setView([43.063, -3.575], 12);
 		
 	map.gridControl.options.follow = true;	
-	var gridLayer1 = L.mapbox.gridLayer("joserra.guiando").addTo(map);
-	var gridControl = L.mapbox.gridControl(gridLayer1).addTo(map);
-	var gridLayer2 = L.mapbox.gridLayer("joserra.pois").addTo(map);
-	var gridControl = L.mapbox.gridControl(gridLayer2).addTo(map);
+	var gridLayer = L.mapbox.gridLayer("joserra.labels").addTo(map);
+	
+	var gridControl = L.mapbox.gridControl(gridLayer).addTo(map);
 	
     var trailsMenu = document.getElementById('trails');
 
