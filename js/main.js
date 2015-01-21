@@ -39,7 +39,7 @@ function app(window, document, L, bikeTrails) {
 //        maxZoom: 18
 //    });
 	var map = L.mapbox.map('map', 'joserra.jf876a70')
-		.setView([43.063, -3.575], 12);
+		.setView([43.119, -3.598], 12);
 		
 	map.gridControl.options.follow = true;	
 	var gridLayer = L.mapbox.gridLayer("joserra.labels").addTo(map);
@@ -78,7 +78,7 @@ function app(window, document, L, bikeTrails) {
         if(trail) map.removeLayer(trail);
         trail = L.geoJson(trails.features[trailIndex], {
             style: function (feature) {
-                return {color: '#e9627d' , weight: 15};
+                return {color: '#e9627d' , weight: 6};
             }
         });
         setTimeout(function () {
@@ -105,9 +105,9 @@ function app(window, document, L, bikeTrails) {
                         break;
                     case 'distance':
                         var val = Math.round(trail.properties[key]);
-                        if(val < 2) val = 'lt2'
-                        if(val > 2 && val < 5) val = '2to5'
-                        if(val > 5) val = 'gt5'
+                        if(val < 10) val = 'lt10'
+                        if(val > 10 && val < 50) val = '10to50'
+                        if(val > 50) val = 'gt50'
                         item.classList.add('category-distance-' + val);
                         break;
                     }

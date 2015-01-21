@@ -165,7 +165,7 @@ a {
 }
 
 .menu-level-3 {
-    height: 80%;
+    height: 90%;
 	z-index: 3;
     -webkit-transform: translateX(250px);
 }
@@ -242,9 +242,9 @@ a {
 #trails.filter-rating-azul .category-rating-azul,
 #trails.filter-rating-amarillo .category-rating-amarillo,
 #trails.filter-rating-rojo .category-rating-rojo,
-#trails.filter-distance-lt2 .category-distance-lt2,
-#trails.filter-distance-2to5 .category-distance-2to5,
-#trails.filter-distance-gt5 .category-distance-gt5 {
+#trails.filter-distance-lt10 .category-distance-lt10,
+#trails.filter-distance-10to50 .category-distance-10to50,
+#trails.filter-distance-gt50 .category-distance-gt50 {
     display: block;
 }
 
