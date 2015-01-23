@@ -50,6 +50,7 @@
 
 	.icon {
 		position: relative;
+		font-size: 0.8em;
 	}
 
 		.icon:before {
