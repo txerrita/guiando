@@ -22,6 +22,7 @@
         </div>
         <style>
 #map-ui {
+	
     position: absolute;
     bottom: 2.5em;
 	text-align:center
@@ -29,7 +30,7 @@
     list-style: none;
     margin: 0;
     left: 2em;
-	z-index: 100;
+	z-index: 90;
 }
  
 #map-ui a {
@@ -48,12 +49,15 @@
 }
 #map-ui li {
 	display: inline;
+	background: red;
+	
 }
 #map-ui a:hover {
     background: #ECF5FA;
 }
  
 #map-ui li:last-child a {
+	
     border-bottom-width: 0px;
     -webkit-border-radius: 0 0 0 0;
     border-radius: 0 0 0 0;
@@ -66,6 +70,12 @@
 	display: inline;
 }
  
+#map-ui a.noactive {
+    background: #ECF5FA;
+    border-color: #ECF5FA;
+    border-top-color: #FFF;
+    color: #3887BE;
+}
 #map-ui a.active {
     background: #3887BE;
     border-color: #3887BE;

@@ -45,8 +45,8 @@ var ui = document.getElementById('map-ui');
 //addLayer(L.mapbox.tileLayer('examples.bike-locations'), 'Bike Stations', 3);
  
 addLayer('joserra.guiando', 'Espinosa', 1);
-addLayer('joserra.ojoG', 'Ojo Guareña', 2);
-addLayer('joserra.pois', 'Puntos', 3);
+addLayer('joserra.pois', 'Puntos', 2);
+addLayer('joserra.ojoG', 'Ojo Guareña', 3);
  
 function addLayer(layer_id, name, zIndex) {
     var layer = L.mapbox.tileLayer(layer_id);
@@ -54,8 +54,8 @@ function addLayer(layer_id, name, zIndex) {
     var gridControl = L.mapbox.gridControl(grid);
     
     layer
-        .setZIndex(zIndex)
-        .addTo(map);
+        .setZIndex(zIndex);
+        //.addTo(map);
  
     // Create a simple layer switcher that toggles layers on
     // and off.
@@ -63,7 +63,7 @@ function addLayer(layer_id, name, zIndex) {
     var link = document.createElement('a');
  
     link.href = '#';
-    link.className = 'active';
+    link.className = 'noactive';
     link.innerHTML = name;
  
     link.onclick = function(e) {
