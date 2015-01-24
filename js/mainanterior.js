@@ -31,79 +31,46 @@ function app(window, document, L, bikeTrails) {
     L.rotatedMarker = function(pos, options) {
         return new L.RotatedMarker(pos, options);
     };
-
-
+	
 	L.mapbox.accessToken = 'pk.eyJ1Ijoiam9zZXJyYSIsImEiOiJnMGdtWUh3In0.xm5EUQ0yb_QvTVZ_AraXaQ';
+	
+	
+		
+//    var map = L.mapbox.map('map', 'joserra.jf876a70', {
+//        center: [43.063, -3.575],
+//        zoom: 12,
+//        gridLayer: true, 
+//        maxZoom: 18,
+//    });
 
-// CÓDIGO DEFINITIVO
-
-var map = L.mapbox.map('map','joserra.jf876a70').setView([43.063, -3.575], 12);
-var ui = document.getElementById('map-ui');
- 
-//addLayer(L.mapbox.tileLayer('examples.map-zgrqqx0w'), 'Base Map', 1);
-//addLayer(L.mapbox.tileLayer('examples.bike-lanes'), 'Bike Lanes', 2);
-//addLayer(L.mapbox.tileLayer('examples.bike-locations'), 'Bike Stations', 3);
- 
-addLayer('joserra.guiando', 'Mapa base', 1);
-addLayer('joserra.pois', 'Puntos', 2);
-//addLayer('examples.bike-locations', 'Bike Stations', 3);
- 
-function addLayer(layer_id, name, zIndex) {
-    var layer = L.mapbox.tileLayer(layer_id);
-    var grid = L.mapbox.gridLayer(layer_id);
-    var gridControl = L.mapbox.gridControl(grid);
-    
-    layer
-        .setZIndex(zIndex);
-        //.addTo(map);
- 
-    // Create a simple layer switcher that toggles layers on
-    // and off.
-    var item = document.createElement('li');
-    var link = document.createElement('a');
- 
-    link.href = '#';
-    link.className = 'active';
-    link.innerHTML = name;
- 
-    link.onclick = function(e) {
-        e.preventDefault();
-        e.stopPropagation();
- 
-        if (map.hasLayer(layer)) {
-            map.removeLayer(layer);
-            this.className = '';
-            
-            //JLC - add grid and grid control
-            map.removeLayer(grid);
-            map.removeControl(gridControl)
-        } else {
-            map.addLayer(layer);
-            this.className = 'active';
-            
-            //JLC - add grid and grid control
-            map.addLayer(grid);
-            map.addControl(gridControl)
-        }
-    };
- 
-    item.appendChild(link);
-    ui.appendChild(item);
-}
- 
+var map = L.mapbox.map('map', 'joserra.jf876a70')
+//		.setView([43.119, -3.598], 12);
+		
+//	map.gridControl.options.follow = true;	
+//	var gridLayer = L.mapbox.gridLayer("joserra.labels").addTo(map);
+//	var gridControl = L.mapbox.gridControl(gridLayer).addTo(map);
+		L.control.layers({
+    'Senderismo': L.mapbox.tileLayer('joserra.guiando').addTo(map),
+    'Puntos de interés': L.mapbox.tileLayer('joserra.pois')
+}, {
+    'Parkings': L.mapbox.tileLayer('joserra.pois'),
+    'Bike Lanes': L.mapbox.tileLayer('joserra.bikes')
+},
+{position: "topright"}
+).addTo(map);
+	
+	var myGridLayer = L.mapbox.gridLayer('joserra.label').addTo(map);
+	var myGridControl = L.mapbox.gridControl(myGridLayer).addTo(map);
 
 
-
-
-
-
-
-
-
-
-
+	map.setView([43.119, -3.598], 12);
+	
 
 	
+	
+
+ 
+ 
     var trailsMenu = document.getElementById('trails');
 
     function toggleMenu(){
