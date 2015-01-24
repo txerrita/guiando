@@ -44,9 +44,9 @@ var ui = document.getElementById('map-ui');
 //addLayer(L.mapbox.tileLayer('examples.bike-lanes'), 'Bike Lanes', 2);
 //addLayer(L.mapbox.tileLayer('examples.bike-locations'), 'Bike Stations', 3);
  
-addLayer('joserra.guiando', 'Mapa base', 1);
-addLayer('joserra.pois', 'Puntos', 2);
-//addLayer('examples.bike-locations', 'Bike Stations', 3);
+addLayer('joserra.guiando', 'Espinosa', 1);
+addLayer('joserra.ojoG', 'Ojo Guareña', 2);
+addLayer('joserra.pois', 'Puntos', 3);
  
 function addLayer(layer_id, name, zIndex) {
     var layer = L.mapbox.tileLayer(layer_id);
@@ -54,8 +54,8 @@ function addLayer(layer_id, name, zIndex) {
     var gridControl = L.mapbox.gridControl(grid);
     
     layer
-        .setZIndex(zIndex);
-        //.addTo(map);
+        .setZIndex(zIndex)
+        .addTo(map);
  
     // Create a simple layer switcher that toggles layers on
     // and off.

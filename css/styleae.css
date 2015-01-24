@@ -4,7 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
-@import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+@import url("font-awesome.min.css");
 
 /* Basic */
 
@@ -120,7 +120,7 @@
 	@keyframes bg { 0% { -moz-transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0); -o-transform: translate3d(0,0,0); -ms-transform: translate3d(0,0,0); transform: translate3d(0,0,0); } 100% { -moz-transform: translate3d(-2250px,0,0); -webkit-transform: translate3d(-2250px,0,0); -o-transform: translate3d(-2250px,0,0); -ms-transform: translate3d(-2250px,0,0); transform: translate3d(-2250px,0,0); } }
 
 	#bg {
-		background-size: 1250px auto;
+		background-size: 2250px auto;
 		width: 6750px;
 	}
 
@@ -203,7 +203,7 @@
 		opacity: 0;
 		position: relative;
 		text-align: center;
-		top: -3em;
+		top: -1em;
 		vertical-align: middle;
 		width: 90%;
 	}

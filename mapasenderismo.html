@@ -23,41 +23,47 @@
         <style>
 #map-ui {
     position: absolute;
-    top: 150px;
-    left: 10px;
+    bottom: 2.5em;
+	text-align:center
+    left: 0;
     list-style: none;
     margin: 0;
-    padding: 0;
-    z-index: 100;
+    left: 2em;
+	z-index: 100;
 }
  
 #map-ui a {
     font: normal 13px/18px 'Voltaire', Helvetica, sans-serif;
     background: #FFF;
     color: #3C4E5A;
-    display: block;
+    display: inline;
     margin: 0;
     padding: 0;
     border: 1px solid #BBB;
     border-bottom-width: 0;
-    min-width: 100px;
+    min-width: 70px;
     padding: 10px;
     text-decoration: none;
+	
 }
- 
+#map-ui li {
+	display: inline;
+}
 #map-ui a:hover {
     background: #ECF5FA;
 }
  
 #map-ui li:last-child a {
-    border-bottom-width: 1px;
-    -webkit-border-radius: 0 0 3px 3px;
-    border-radius: 0 0 3px 3px;
+    border-bottom-width: 0px;
+    -webkit-border-radius: 0 0 0 0;
+    border-radius: 0 0 0 0;
+	display: inline;
 }
  
 #map-ui li:first-child a {
-    -webkit-border-radius: 3px 3px 0 0;
-    border-radius: 3px 3px 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    border-radius: 0 0 0 0;
+	display: inline;
 }
  
 #map-ui a.active {
@@ -67,6 +73,7 @@
     color: #FFF;
 }
 </style>
+
         <ul id='map-ui'></ul>
         <div id="map"></div>
         <div id="menu" class="off-canvas">
