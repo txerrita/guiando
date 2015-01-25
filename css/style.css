@@ -259,3 +259,65 @@ a {
     background-size: 50px 50px;
     cursor: pointer;
 }
+/* Estilo del div selector de capas*/
+
+#map-ui {
+	
+    position: absolute;
+    bottom: 2.5em;
+	text-align:center
+    left: 0;
+    list-style: none;
+    margin: 0;
+    left: 2em;
+	z-index: 90;
+}
+ 
+#map-ui a {
+    font: normal 13px/18px 'Voltaire', Helvetica, sans-serif;
+    background: #FFF;
+    color: #3C4E5A;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #BBB;
+    border-bottom-width: 1px;
+    min-width: 70px;
+    padding: 10px;
+    text-decoration: none;
+	
+}
+#map-ui li {
+	display: inline;	
+}
+
+#map-ui a:hover {
+    background: #ECF5FA;
+}
+ 
+#map-ui li:last-child a {
+	
+    border-bottom-width: 1px;
+    -webkit-border-radius: 0 0 0 0;
+    border-radius: 0 0 0 0;
+	display: inline;
+}
+ 
+#map-ui li:first-child a {
+    -webkit-border-radius: 0 0 0 0;
+    border-radius: 0 0 0 0;
+	display: inline;
+}
+ 
+#map-ui a.noactive {
+    background: #ECF5FA;
+    border-color: #FFF;
+    border-top-color: #FFF;
+    color: #3887BE;
+}
+#map-ui a.active {
+    background: #3887BE;
+    border-color: #CCC;
+    border-top-color: #FFF;
+    color: #FFF;
+}

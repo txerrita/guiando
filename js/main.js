@@ -44,9 +44,10 @@ var ui = document.getElementById('map-ui');
 //addLayer(L.mapbox.tileLayer('examples.bike-lanes'), 'Bike Lanes', 2);
 //addLayer(L.mapbox.tileLayer('examples.bike-locations'), 'Bike Stations', 3);
  
-addLayer('joserra.guiando', 'Espinosa', 1);
-addLayer('joserra.pois', 'Puntos', 2);
-addLayer('joserra.ojoG', 'Ojo Guareña', 3);
+addLayer('joserra.guiando', 'Senderismo', 1);
+addLayer('joserra.pois', 'Mountain Bike', 2);
+addLayer('joserra.ojoG', 'Turísticas', 3);
+addLayer('joserra.ojoG', 'Puntos de interés', 3);
  
 function addLayer(layer_id, name, zIndex) {
     var layer = L.mapbox.tileLayer(layer_id);
