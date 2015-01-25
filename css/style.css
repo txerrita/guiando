@@ -274,7 +274,7 @@ a {
 }
  
 #map-ui a {
-    font: normal 13px/18px 'Voltaire', Helvetica, sans-serif;
+    font: normal 22px 'FontAwesome', Helvetica, sans-serif;
     background: #FFF;
     color: #3C4E5A;
     display: inline;
@@ -288,7 +288,7 @@ a {
 	
 }
 #map-ui li {
-	display: inline;	
+	display: inline;
 }
 
 #map-ui a:hover {
@@ -310,6 +310,7 @@ a {
 }
  
 #map-ui a.noactive {
+	width: 100px;
     background: #ECF5FA;
     border-color: #FFF;
     border-top-color: #FFF;
