@@ -200,7 +200,13 @@ a {
 }
 
 .trail-familiar { 
-	
+	font-family: 'FontAwesome', sans-serif;
+	color: #CD853F;
+}
+
+.trail-circular { 
+	font-family: 'FontAwesome', sans-serif;
+	color: #CD853F;
 }
 
 .trail-rating-amarillo {
