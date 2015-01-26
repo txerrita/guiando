@@ -10,7 +10,7 @@ function onError(error) {
     // do something
 }
 navigator.notification.alert(
-    'El GPS está DESACTIVADO, o no recibe señal.Por favor actívalo y entra de nuevo al mapa.',  // message
+    'El GPS está DESACTIVADO, o no recibe señal. Si quieres utilizar las funciones de GeoPosicionamiento, actívalo y entra de nuevo al mapa.',  // message
     alertDismissed,         // callback
     'GUIANDO',            // title
     'OK'                  // buttonName
@@ -18,7 +18,7 @@ navigator.notification.alert(
 
 // alert('El GPS está DESACTIVADO, o no recibe señal.Por favor actívalo y entra de nuevo al mapa.');}
 
-navigator.geolocation.watchPosition(onSuccess, onError,{maximumAge: 3000, timeout: 5000, enableHighAccuracy: true});
+navigator.geolocation.watchPosition(onSuccess, onError,{maximumAge: 3000, timeout: 7000, enableHighAccuracy: true});
 
 function app(window, document, L, bikeTrails) {
     var menuStack = [];
