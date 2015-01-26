@@ -5,7 +5,10 @@ var onSuccess = function(position) {
 // onError Callback receives a PositionError object
 //
 function onError(error) {
-    alert('El GPS está DESACTIVADO, por favor actívalo y entra de nuevo al mapa');
+    navigator.notification.alert(
+    'El GPS está DESACTIVADO, por favor actívalo y entra de nuevo al mapa.',  // message
+    'GUIANDO',            // title
+    'OK'                  // buttonName
 }
 
 navigator.geolocation.watchPosition(onSuccess, onError,{maximumAge: 3000, timeout: 5000, enableHighAccuracy: true});
