@@ -4,9 +4,14 @@ var onSuccess = function(position) {
 
 // onError Callback receives a PositionError object
 //
+function alertDismissed() {
+    // do something
+} 
+
 function onError(error) {
     navigator.notification.alert(
     'El GPS está DESACTIVADO, por favor actívalo y entra de nuevo al mapa.',  // message
+    alertDismissed,         // callback
     'GUIANDO',            // title
     'OK'                  // buttonName
 }
