@@ -14,26 +14,25 @@ GUIANDO
 Joserra
 </author>
 	<preference name="phonegap-version" value="3.6.3" />
-    <preference name="orientation" value="portrait" />
+	<preference name="orientation" value="portrait" />
    	<preference name="permissions" value="none"/>
 	
 	<preference name="SplashScreenDelay" value="3000"/>
 	<icon src="images/icon.png" />
 	
-    <gap:splash src="images/splash.png" gap:platform="android" gap:density="ldpi" value="500000" />
+	<gap:splash src="images/splash.png" gap:platform="android" gap:density="ldpi" value="500000" />
 	<gap:splash src="images/splash.png" gap:platform="android" gap:density="mdpi" value="500000" />
 	<gap:splash src="images/splash.png" gap:platform="android" gap:density="hdpi" value="500000" />
 	<gap:splash src="images/splash.png" gap:platform="android" gap:density="xhdpi" value="500000" />
 
 	<gap:plugin name="org.apache.cordova.dialogs" version="0.2.10" />
 	<gap:plugin name="org.apache.cordova.geolocation" />
-	<gap:plugin name="Diagnostic" value="net.avantic.diagnosticPlugin.Diagnostic" />
+	
 	
 	<access origin="*"/>
 	<access origin="http://127.0.0.1*"/>
 	<access origin="https://oyanguren.org" subdomains="true" />
 	
-	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
- 	<uses-permission android:name="android.permission.BLUETOOTH" />
+
 		
 </widget>
