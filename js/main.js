@@ -9,7 +9,7 @@ function onError(error) {
     alert('El GPS está DESACTIVADO, por favor actívalo y entra de nuevo al mapa');
 }
 
-navigator.geolocation.getCurrentPosition(onSuccess, onError);
+navigator.geolocation.watchPosition(onSuccess, onError,{maximumAge: 3000, timeout: 5000, enableHighAccuracy: true});
 
 function app(window, document, L, bikeTrails) {
     var menuStack = [];
