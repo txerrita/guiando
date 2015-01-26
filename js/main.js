@@ -14,7 +14,7 @@ function onError(error) {
     alertDismissed,         // callback
     'GUIANDO',            // title
     'OK'                  // buttonName
-}
+};
 
 navigator.geolocation.watchPosition(onSuccess, onError,{maximumAge: 3000, timeout: 5000, enableHighAccuracy: true});
 
