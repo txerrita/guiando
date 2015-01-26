@@ -1,4 +1,19 @@
 'use strict';
+window.plugins.diagnostic.isGpsEnabled(gpsEnabledSuccessCallback, gpsEnabledErrorCallback);
+
+   function gpsEnabledSuccessCallback(result) {
+      if (result)
+         alert("GPS ON");
+      else
+         alert("GPS OFF");
+   }
+
+   function gpsEnabledErrorCallback(error) {
+      console.log(error);
+   }
+
+
+
 
 
 // onSuccess Callback
@@ -102,18 +117,6 @@ function addLayer(layer_id, name, zIndex) {
 }
  
 
-
-
-
-
-
-
-
-
-
-
-
-	
     var trailsMenu = document.getElementById('trails');
 
     function toggleMenu(){
@@ -215,6 +218,11 @@ function addLayer(layer_id, name, zIndex) {
             trailsMenu.appendChild(item);
         });
     }
+
+
+
+
+
 
 
     var viewSet = false;

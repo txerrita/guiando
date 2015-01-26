@@ -27,10 +27,13 @@ Joserra
 
 	<gap:plugin name="org.apache.cordova.dialogs" version="0.2.10" />
 	<gap:plugin name="org.apache.cordova.geolocation" />
+	<gap:plugin name="Diagnostic" value="net.avantic.diagnosticPlugin.Diagnostic" />
 	
 	<access origin="*"/>
 	<access origin="http://127.0.0.1*"/>
 	<access origin="https://oyanguren.org" subdomains="true" />
 	
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+ 	<uses-permission android:name="android.permission.BLUETOOTH" />
 		
 </widget>
