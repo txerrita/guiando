@@ -1,28 +1,15 @@
 'use strict';
-window.plugins.diagnostic.isGpsEnabled(gpsEnabledSuccessCallback, gpsEnabledErrorCallback);
+var onSuccess = function(position) {
+    alert('El GPS está activado');
+};
 
-   function gpsEnabledSuccessCallback(result) {
-      if (result)
-         alert("GPS ON");
-      else
-         alert("GPS OFF");
-   }
-
-   function gpsEnabledErrorCallback(error) {
-      console.log(error);
-   }
-
-
-
-
-
-// onSuccess Callback
-// This method accepts a Position object, which contains the
-// current GPS coordinates
+// onError Callback receives a PositionError object
 //
-var options = {maximumAge: 0, timeout: 10000, enableHighAccuracy:true};
-navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
-// End GPS position
+function onError(error) {
+    alert('El GPS está DESACTIVADO, por favor actívalo y entra de nuevo al mapa');
+}
+
+navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
 function app(window, document, L, bikeTrails) {
     var menuStack = [];
