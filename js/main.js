@@ -1,6 +1,5 @@
 'use strict';
 var onSuccess = function(position) {
-    alert('El GPS está activado');
 };
 
 // onError Callback receives a PositionError object
