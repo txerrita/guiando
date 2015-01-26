@@ -6,7 +6,17 @@ var onSuccess = function(position) {
 //
 
 function onError(error) {
-    alert('El GPS está DESACTIVADO, o no recibe señal.Por favor actívalo y entra de nuevo al mapa.');}
+    function alertDismissed() {
+    // do something
+}
+navigator.notification.alert(
+    'El GPS está DESACTIVADO, o no recibe señal.Por favor actívalo y entra de nuevo al mapa.',  // message
+    alertDismissed,         // callback
+    'GUIANDO',            // title
+    'OK'                  // buttonName
+);}
+
+// alert('El GPS está DESACTIVADO, o no recibe señal.Por favor actívalo y entra de nuevo al mapa.');}
 
 navigator.geolocation.watchPosition(onSuccess, onError,{maximumAge: 3000, timeout: 5000, enableHighAccuracy: true});
 
