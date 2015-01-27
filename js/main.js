@@ -10,7 +10,7 @@ function onError(error) {
     // do something
 }
 navigator.notification.alert(
-    'El GPS está DESACTIVADO, o no recibe señal. Si quieres utilizar las funciones de GeoPosicionamiento, actívalo y entra de nuevo al mapa.',  // message
+    'El GPS está DESACTIVADO, o no recibe señal. Si quieres utilizar las funciones del GPS, actívalo y entra de nuevo al mapa.',  // message
     alertDismissed,         // callback
     'GUIANDO',            // title
     'OK'                  // buttonName
