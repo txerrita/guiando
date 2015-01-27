@@ -9,7 +9,24 @@
         <link href="./css/font-awesome.min.css" rel="stylesheet">
         <link href='http://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
         <link rel="stylesheet" href="./css/style.css">
+		<link href="./css/chardinjs.css" rel="stylesheet">
 
+
+
+
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="./js/chardinjs.min.js"></script>
+<script src="./js/chardinjs.js"></script>
+<script>
+$(document).ready(function(){
+  $('body').chardinJs('start');
+});
+
+</script>
+
+
+	
+		        
     </head>
     <body onLoad="init()">
         <div class="topbar">
@@ -18,12 +35,12 @@
                 <span class="title-rest"></span>
             </div>
             <menu class="btn-bar" >
-                <a class="btn-bar-btn" href="#" onClick="app.toggleMenu()"><i class="fa fa-ellipsis-h"></i></a>
+                <a class="btn-bar-btn" data-intro="icono de menú." data-position="left" href="#" onClick="app.toggleMenu()"><i class="fa fa-ellipsis-h"></i></a>
             </menu>
         </div>
        
 
-        <ul id='map-ui'></ul>
+        <ul id='map-ui' data-intro="Selecciona los datos a mostrar. Senderismo, Mountain Bike, Turísticos o Puntos de interés." data-position="right"></ul>
         <div id="map"></div>
         <div id="menu" class="off-canvas">
             <a href="#"  onClick="app.back()"><i class="fa fa-chevron-left"></i></a>
@@ -57,5 +74,6 @@
         <script src='http://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
         <script src="./js/trails.js"></script>
         <script src="./js/main.js"></script>
+        <script src="./js/quicktour.js"></script>
     </body>
 </html>
