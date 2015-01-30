@@ -1,4 +1,7 @@
 'use strict';
+
+	    
+
 var onSuccess = function(position) {
 };
 
