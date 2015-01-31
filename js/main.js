@@ -79,10 +79,10 @@ var ui = document.getElementById('map-ui');
 //addLayer(L.mapbox.tileLayer('examples.bike-lanes'), 'Bike Lanes', 2);
 //addLayer(L.mapbox.tileLayer('examples.bike-locations'), 'Bike Stations', 3);
  
-addLayer('joserra.senderismo', '\uf21d', 1);
+addLayer('joserra.guiando', '\uf21d', 1);
 addLayer('joserra.mtb', '\uf206', 2);
 addLayer('joserra.turistica', '\uf19c', 3);
-addLayer('joserra.pois', '\uf041', 3);
+addLayer('joserra.pois', '\uf041', 4);
  
 function addLayer(layer_id, name, zIndex) {
     var layer = L.mapbox.tileLayer(layer_id);
