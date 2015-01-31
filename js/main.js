@@ -160,7 +160,7 @@ function addLayer(layer_id, name, zIndex) {
         if(trail) map.removeLayer(trail);
         trail = L.geoJson(trails.features[trailIndex], {
             style: function (feature) {
-                return {color: '#e9627d' , weight: 6};
+                return {color: '#ff6600' , weight: 8};
             }
         });
         setTimeout(function () {
