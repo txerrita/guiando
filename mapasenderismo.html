@@ -19,7 +19,7 @@
         <div class="topbar">
             <div class="title">
                 <span class="title-main" data-intro='Tutorial para que uses la aplicación!'data-position='right' data-step='1'>GUIANDO</span>
-                <span class="title-rest"> Espinosa de los Monteros</span>
+                <span class="title-rest">Espinosa de los Monteros</span>
             </div>
             <menu class="btn-bar" >
                 <a class="btn-bar-btn" href="#" onClick="app.toggleMenu()" data-intro="Después de tener una visión general, selecciona la ruta que desees en este menú" data-position='left' data-step='3' ><i class="fa fa-ellipsis-h"></i></a>
@@ -33,21 +33,22 @@
             <a href="#"  onClick="app.back()"><i class="fa fa-chevron-left"></i></a>
             <ul class="menu-level-1">
                 <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-none')"><a href="#">todas las rutas</a></li>
-                <li class="menu-item" onClick="app.toggleSubMenu('porarea')"><a href="#">por tipo</a></li>
+                <li class="menu-item" onClick="app.toggleSubMenu('portipo')"><a href="#">por tipo</a></li>
                 <li class="menu-item" onClick="app.toggleSubMenu('pordificultad')"><a href="#">por dificultad</a></li>
                 <li class="menu-item" onClick="app.toggleSubMenu('pordistancia')"><a href="#">por distancia</a></li>
             </ul>
-            <ul id="porarea" class="submenu menu-level-2">
+            <ul id="portipo" class="submenu menu-level-2">
                 <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-type-senderismo')"><a href="#">senderismo</a></li>
                 <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-type-btt')"><a href="#">mountain bike</a></li>
                 <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-type-turistica')"><a href="#">turísticas</a></li>
 <!--            <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-maparea-mount-seven')"><a href="#">Mount 7</a></li> -->
             </ul>
             <ul id="pordificultad" class="submenu menu-level-2">
-                <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-rating-verde')"><a href="#">sendero local</a></li>
-                <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-rating-amarillo')"><a href="#">pequeño recorrido</a></li>
-                <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-rating-rojo')"><a href="#">gran recorrido</a></li>
-<!--                  <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-rating-azul')"><a href="#">Double Black</a></li>  -->
+                <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-dificultad-baja')"><a href="#">baja</a></li>
+                <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-dificultad-media-baja')"><a href="#">media-baja</a></li>
+                <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-dificultad-media')"><a href="#">media</a></li>
+		        <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-dificultad-media-alta')"><a href="#">media-alta</a></li>
+                <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-dificultad-alta')"><a href="#">alta</a></li>
             </ul>
             <ul id="pordistancia" class="submenu menu-level-2">
                 <li class="menu-item" onClick="app.toggleSubMenu('trails', 'filter-distance-lt10')"><a href="#">< 10 km</a></li>

@@ -245,7 +245,11 @@ a {
 #trails.filter-type-senderismo .category-type-senderismo,
 #trails.filter-type-btt .category-type-btt,
 #trails.filter-type-turistica .category-type-turistica,
-#trails.filter-rating-verde .category-rating-verde,
+#trails.filter-dificultad-baja .category-dificultad-baja,
+#trails.filter-dificultad-media-baja .category-dificultad-media-baja,
+#trails.filter-dificultad-media .category-dificultad-media,
+#trails.filter-dificultad-media-alta .category-dificultad-media-alta,
+#trails.filter-dificultad-alta .category-dificultad-alta,
 #trails.filter-rating-azul .category-rating-azul,
 #trails.filter-rating-amarillo .category-rating-amarillo,
 #trails.filter-rating-rojo .category-rating-rojo,
@@ -256,7 +260,7 @@ a {
 }
 
 #ayuda {
-    position: absolute; bottom: 2em; left: 91%;
+    position: absolute; bottom: 0.7em; left: 90%;
     height: 24px;
     width: 24px;
     background: url('../images/ayuda.png') top left no-repeat;

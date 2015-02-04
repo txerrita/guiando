@@ -31,14 +31,12 @@ navigator.notification.alert(
     'OK'                  // buttonName
 );}
 
-// alert('El GPS está DESACTIVADO, o no recibe señal.Por favor actívalo y entra de nuevo al mapa.');}
-
 navigator.geolocation.watchPosition(onSuccess, onError,{maximumAge: 3000, timeout: 7000, enableHighAccuracy: true});
 
 function app(window, document, L, bikeTrails) {
     var menuStack = [];
     var trailsFilter = '';
-    var trail = {};
+	var trail = {};
     var trails = {};
     var ratings = {
         'rojo': '&#9679;',
@@ -82,7 +80,7 @@ var ui = document.getElementById('map-ui');
 addLayer('joserra.guiando', '\uf21d', 1);
 addLayer('joserra.mtb', '\uf206', 2);
 addLayer('joserra.turistica', '\uf19c', 3);
-addLayer('joserra.pois', '\uf041', 4);
+addLayer('joserra.pois', '\uf041', 3);
  
 function addLayer(layer_id, name, zIndex) {
     var layer = L.mapbox.tileLayer(layer_id);
@@ -160,7 +158,7 @@ function addLayer(layer_id, name, zIndex) {
         if(trail) map.removeLayer(trail);
         trail = L.geoJson(trails.features[trailIndex], {
             style: function (feature) {
-                return {color: '#ff6600' , weight: 8};
+                return {color: '#e9627d' , weight: 6};
             }
         });
         setTimeout(function () {
@@ -180,8 +178,11 @@ function addLayer(layer_id, name, zIndex) {
             for (var key in trail.properties) {
                 if (trail.properties[key]) {
                     switch(key){
-                    case 'rating':
-                    case 'type':
+                    case 'dificultad':
+						 var val = trail.properties[key].toLowerCase().split(' ').join('-');
+                        item.classList.add(['category', key, val].join('-'));
+                        break;
+					case 'type':
                         var val = trail.properties[key].toLowerCase().split(' ').join('-');
                         item.classList.add(['category', key, val].join('-'));
                         break;
