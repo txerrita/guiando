@@ -260,7 +260,7 @@ a {
 }
 
 #ayuda {
-    position: absolute; bottom: 0.7em; left: 90%;
+    position: absolute; bottom: 1.2em; left: 91%;
     height: 24px;
     width: 24px;
     background: url('../images/ayuda.png') top left no-repeat;
