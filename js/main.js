@@ -79,7 +79,7 @@ var ui = document.getElementById('map-ui');
  
 addLayer('joserra.guiando', '\uf21d', 1);
 addLayer('joserra.mtb', '\uf206', 2);
-addLayer('joserra.turistica', '\uf19c', 3);
+addLayer('joserra.turisticas', '\uf19c', 3);
 addLayer('joserra.pois', '\uf041', 3);
  
 function addLayer(layer_id, name, zIndex) {
