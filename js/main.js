@@ -43,6 +43,7 @@ function app(window, document, L, bikeTrails) {
         'amarillo': '&#9679;',
         'azul': '&#9679;',
         'verde': '&#9679;',
+		'naranja': '&#9679;',
     };
     var marker;
     var trails = bikeTrails;
@@ -76,12 +77,12 @@ var ui = document.getElementById('map-ui');
 //addLayer(L.mapbox.tileLayer('examples.map-zgrqqx0w'), 'Base Map', 1);
 //addLayer(L.mapbox.tileLayer('examples.bike-lanes'), 'Bike Lanes', 2);
 //addLayer(L.mapbox.tileLayer('examples.bike-locations'), 'Bike Stations', 3);
- 
+
 addLayer('joserra.guiando', '\uf21d', 1);
 addLayer('joserra.mtb', '\uf206', 2);
-addLayer('joserra.turistica', '\uf19c', 3);
-addLayer('joserra.pois', '\uf041', 3);
- 
+addLayer('joserra.turisticas', '\uf19c', 3);
+addLayer('joserra.pois', '\uf041', 4);
+
 function addLayer(layer_id, name, zIndex) {
     var layer = L.mapbox.tileLayer(layer_id);
     var grid = L.mapbox.gridLayer(layer_id);
@@ -179,7 +180,7 @@ function addLayer(layer_id, name, zIndex) {
                 if (trail.properties[key]) {
                     switch(key){
                     case 'dificultad':
-						 var val = trail.properties[key].toLowerCase().split(' ').join('-');
+						var val = trail.properties[key].toLowerCase().split(' ').join('-');
                         item.classList.add(['category', key, val].join('-'));
                         break;
 					case 'type':

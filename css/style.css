@@ -237,6 +237,13 @@ a {
     font-size: 2.3em;
 }
 
+.trail-rating-naranja {
+    color: #ff6600;
+    position: relative;
+    top: 7px;
+    font-size: 2.3em;
+}
+
 #trails li {
     display: none;
 }
