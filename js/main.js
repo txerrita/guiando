@@ -81,13 +81,8 @@ var ui = document.getElementById('map-ui');
 addLayer('joserra.guiando', '\uf21d', 1);
 addLayer('joserra.mtb', '\uf206', 2);
 addLayer('joserra.turisticas', '\uf19c', 3);
-<<<<<<< HEAD
 addLayer('joserra.pois', '\uf041', 4);
 
-=======
-addLayer('joserra.pois', '\uf041', 3);
- 
->>>>>>> origin/master
 function addLayer(layer_id, name, zIndex) {
     var layer = L.mapbox.tileLayer(layer_id);
     var grid = L.mapbox.gridLayer(layer_id);
