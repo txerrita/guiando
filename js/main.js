@@ -218,7 +218,7 @@ function addLayer(layer_id, name, zIndex) {
 						
 			var p = document.createElement('p');
             p.classList.add('trail-distance','trail-familiar', 'trail-circular');
-			p.textContent = trail.properties.distance+' km  '+ trail.properties.familiar +'   '+ trail.properties.circular;
+			p.textContent = trail.properties.num +' '+ trail.properties.distance+' km  '+ trail.properties.familiar +'   '+ trail.properties.circular;
             item.appendChild(p);
 			
 			var p = document.createElement('p');
