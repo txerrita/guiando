@@ -14,7 +14,7 @@ GUIANDO
 Joserra
 </author>
 	<preference name="phonegap-version" value="3.7.0" />
-	<preference name="orientation" value="portrait" />
+	<preference name="orientation" value="default" />
    	<preference name="permissions" value="none"/>
 	
 	<preference name="SplashScreenDelay" value="3000"/>
